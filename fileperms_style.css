@@ -36,3 +36,12 @@
 .no-close .ui-dialog-titlebar-close {
     display: none;
 }
+
+.help-list{
+    padding: 40px;
+    font-weight: 300;
+}
+
+.help-title{
+
+}

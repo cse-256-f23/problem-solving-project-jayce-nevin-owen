@@ -56,7 +56,7 @@ permission_groups = {
         permissions.DELETE,
         permissions.DELETE_SUB,
     ],
-    Full_control: [
+    All_Permissions: [
         permissions.LIST,
         permissions.READ_ATTR,
         permissions.READ_EXTENDED_ATTR,

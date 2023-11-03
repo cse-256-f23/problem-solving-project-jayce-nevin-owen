@@ -61,6 +61,7 @@ $('.permbutton').click( function( e ) {
     let path = e.currentTarget.getAttribute('path');
     perm_dialog.attr('filepath', path)
     perm_dialog.dialog('open')
+    // open_advanced_dialog(perm_dialog.attr('filepath'))
     //open_permissions_dialog(path)
 
     // Deal with the fact that folders try to collapse/expand when you click on their permissions button:
@@ -68,6 +69,34 @@ $('.permbutton').click( function( e ) {
     // Emit a click for logging purposes:
     emitter.dispatchEvent(new CustomEvent('userEvent', { detail: new ClickEntry(ActionEnum.CLICK, (e.clientX + window.pageXOffset), (e.clientY + window.pageYOffset), e.target.id,new Date().getTime()) }))
 });
+
+const current_task = $("#scenario_context").data("tag");
+// add clearer directions in the side-panel
+const sidebar = $("#sidepanel");
+console.log(sidebar);
+const ideas = $("<div id='help-list-69' class='help-list'><h3 class='help-title'>Read This Before Starting</h3></div>")
+sidebar.append(ideas);
+let steps;
+switch (current_task) {
+    case "remove_direct_permission":
+        steps = ["Click on the lock next to <strong>presentation_documents</strong>.", "Select 'Add...'", "Select 'employee4'", "Select 'Deny' for 'all_permissions'.", "Click ok."]
+        break;
+    case "add_new_user":
+        steps = ["Click on the lock next to <strong>importantfile.txt</strong>.", "Select 'employee3'", "Remove all of their 'alllow' permissions.", "Select 'Deny' for 'all_permissions'.", "Click ok."]
+        break;
+    default:
+        break;
+}
+
+const specificInstructions = $("<ol id='spec-instruct'> </ol>");
+ideas.append(specificInstructions);
+
+let index = 1;
+steps.forEach(step => {
+    const instruction = $(`<li id='step-${index}'> ${step} </li>`);
+    specificInstructions.append(instruction);
+});
+
 
 
 // ---- Assign unique ids to everything that doesn't have an ID ----
