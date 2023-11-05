@@ -79,24 +79,24 @@ sidebar.append(ideas);
 let steps;
 switch (current_task) {
     case "remove_direct_permission":
-        steps = ["Click on the lock next to <strong>presentation_documents</strong>.", "Select 'Add...'", "Select 'employee4'", "Select 'Ok'", "Click ok."]
+        steps = ["Click on the lock next to <strong>presentation_documents</strong>.", "Select 'Add...'", "Select 'employee4'", "Select 'Ok'", "Click ok.", "Process complete"]
         break;
     case "add_new_user":
-        steps = ["Click on the lock next to <strong>importantfile.txt</strong>.", "Select 'employee3'", "Remove all of their 'allow' permissions.", "Select 'Deny' for 'all_permissions'.", "Click ok."]
+        steps = ["Click on the lock next to <strong>importantfile.txt</strong>.", "Select 'employee3'", "Remove all of their 'allow' permissions.", "Select 'Deny' for 'all_permissions'.", "Click ok.", "Process complete"]
         break;
     case "add_full_permissions":
         steps = ["Click on the lock next to <strong>presentation documents</strong>.", "Select 'Add...'","Select 'new_manager'", "click ok", "click 'new manager' under the group or users names column",
-        "Look at the allow column and click the checkbox next to full_control", "Click ok."]
+        "Look at the allow column and click the checkbox next to full_control", "Click ok.", "Process complete"]
         break;
     case "remove_inherited_permission":
-        steps = ["Click on the lock next to <strong>importantfile.txt</strong>.","Select 'employee 3'", "click the check box that is next to modify <strong>that is also under the deny column</strong>", "Click ok."]
+        steps = ["Click on the lock next to <strong>importantfile.txt</strong>.","Select 'employee 3'", "click the check box that is next to modify <strong>that is also under the deny column</strong>", "Click ok.", "Process complete"]
         break;
     case "intern_permissions":
             steps = ["Click on the lock next to <strong>intern_subproject</strong>.", "Select 'intern'", "click the check box that is under the allow column that is also next to 'write'",
-            "Click ok."]
+            "Click ok.", "Process complete"]
             break;
     case "remove_user_with_inheritance":
-        steps = ["Click on the lock next to <strong>importantfile.txt</strong>.", "Select 'employee 3'", "click the check box that is next to the full control column <strong>and is also under the deny column</strong>",  "Click ok."]
+        steps = ["Click on the lock next to <strong>importantfile.txt</strong>.", "Select 'employee 3'", "click the check box that is next to the full control column <strong>and is also under the deny column</strong>",  "Click ok.", "Process complete"]
         break;
     case "restrict_group_member":
         steps = ["Click on the lock next to <strong>importantfile.txt</strong>.",
@@ -108,13 +108,13 @@ switch (current_task) {
         " <strong>(***CHECK THIS CAREFULLY***)</strong>Under the allow column, check every box that has the word 'read'",
             "Under the deny column, check every box that was <strong>not</strong> checked on the left",
             "Click ok.",
-            "close all the popups"]
+            "close all the popups", "Process complete"]
         break;
         case "let_ta_modify":
-            steps = ["Click on the lock next to <strong>Lecture_notes</strong>.", "Click Advanced", "click the bottommost checkbox",  "Click yes", "Click ok.", "Close the popups."]
+            steps = ["Click on the lock next to <strong>Lecture_notes</strong>.", "Click Advanced", "click the bottommost checkbox",  "Click yes", "Click ok.", "Close the popups.", "Process complete"]
             break;
         case "lost_inheritance":
-            steps = ["Click on the lock next to <strong>Lecture_notes</strong>.", "Click Advanced", "click the bottommost checkbox",  "Click yes", "Click ok.", "Close the popups."]
+            steps = ["Click on the lock next to <strong>Lecture_notes</strong>.", "Click Advanced", "click the bottommost checkbox",  "Click yes", "Click ok.", "Close the popups.", "Process complete"]
             break;
     default:
         break;
