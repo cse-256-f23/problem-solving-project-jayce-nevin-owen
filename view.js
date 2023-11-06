@@ -79,10 +79,10 @@ sidebar.append(ideas);
 let steps;
 switch (current_task) {
     case "remove_direct_permission":
-        steps = ["Click on the lock next to <strong>presentation_documents</strong>.", "Select 'Add...'", "Select 'employee4'", "Select 'Ok'", "Click ok.", "Process complete"]
+        steps = ["Click on the lock next to <strong>importantfile.txt</strong>.", "Select 'employee3'", "Remove all of their 'allow' permissions.", "Select 'Deny' for 'all_permissions'.", "Click ok.", "Process complete"]
         break;
     case "add_new_user":
-        steps = ["Click on the lock next to <strong>importantfile.txt</strong>.", "Select 'employee3'", "Remove all of their 'allow' permissions.", "Select 'Deny' for 'all_permissions'.", "Click ok.", "Process complete"]
+        steps = ["Click on the lock next to <strong>presentation_documents</strong>.", "Select 'Add...'", "Select 'employee4'", "Select 'Ok'", "Click ok.", "Process complete"]
         break;
     case "add_full_permissions":
         steps = ["Click on the lock next to <strong>presentation documents</strong>.", "Select 'Add...'","Select 'new_manager'", "click ok", "click 'new manager' under the group or users names column",
