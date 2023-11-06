@@ -74,19 +74,21 @@ const current_task = $("#scenario_context").data("tag");
 // add clearer directions in the side-panel
 const sidebar = $("#sidepanel");
 console.log(sidebar);
-const ideas = $("<div id='help-list-69' class='help-list'><h3 class='help-title'>Read This Before Starting</h3></div>")
+const ideas = $("<div id='help-list-69' class='help-list'><h3 class='help-title'>Read This Before Starting and Move Popups to Left to Read This While Working</h3></div>")
 sidebar.append(ideas);
 let steps;
 switch (current_task) {
-    case "remove_direct_permission":
-        steps = ["Click on the lock next to <strong>importantfile.txt</strong>.", "Select 'employee3'", "Remove all of their 'allow' permissions.", "Select 'Deny' for 'all_permissions'.", "Click ok.", "Process complete"]
-        break;
+
+
     case "add_new_user":
-        steps = ["Click on the lock next to <strong>presentation_documents</strong>.", "Select 'Add...'", "Select 'employee4'", "Select 'Ok'", "Click ok.", "Process complete"]
+        steps = ["Click on the lock next to <strong>presentation_documents</strong>.", "Select 'Add...'", "Select 'employee4'", "Select 'Ok'","click employee 4 and check the modify check box and the read checkbox that is under the allow column" ,"Click ok.", "Process complete"]
+        break;
+    case "remove_direct_permission":
+        steps = ["Click on the lock next to <strong>importantfile.txt</strong>.", "Select 'employee3'", " uncheck all of their 'allow' permissions.", "Select 'Deny' for 'all_permissions'.", "Click ok.", "Process complete"]
         break;
     case "add_full_permissions":
         steps = ["Click on the lock next to <strong>presentation documents</strong>.", "Select 'Add...'","Select 'new_manager'", "click ok", "click 'new manager' under the group or users names column",
-        "Look at the allow column and click the checkbox next to full_control", "Click ok.", "Process complete"]
+        "Look at the allow column and click the checkbox next to all permissions", "Click ok.", "Process complete"]
         break;
     case "remove_inherited_permission":
         steps = ["Click on the lock next to <strong>importantfile.txt</strong>.","Select 'employee 3'", "click the check box that is next to modify <strong>that is also under the deny column</strong>", "Click ok.", "Process complete"]
@@ -96,7 +98,7 @@ switch (current_task) {
             "Click ok.", "Process complete"]
             break;
     case "remove_user_with_inheritance":
-        steps = ["Click on the lock next to <strong>importantfile.txt</strong>.", "Select 'employee 3'", "click the check box that is next to the full control column <strong>and is also under the deny column</strong>",  "Click ok.", "Process complete"]
+        steps = ["Click on the lock next to <strong>importantfile.txt</strong>.", "Select 'employee 3'", "click the check box that is next to the all permissions row <strong>and is also under the deny column</strong>",  "Click ok.", "Process complete"]
         break;
     case "restrict_group_member":
         steps = ["Click on the lock next to <strong>importantfile.txt</strong>.",
