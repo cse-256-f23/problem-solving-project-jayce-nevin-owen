@@ -235,6 +235,8 @@ function open_advanced_dialog(file_path) {
     else {
         $('#adv_perm_inheritance').prop('checked', false)
     }
+    const a = perm_dialog.dialog();
+
 
 
 
@@ -262,6 +264,7 @@ function open_advanced_dialog(file_path) {
     $('#adv_owner_user_list').append(all_user_list)
 
     // open dialog:
+    $(`#advdialog`).append(a);
     $(`#advdialog`).dialog('open')
 }
 

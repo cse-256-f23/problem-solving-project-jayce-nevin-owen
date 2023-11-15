@@ -9,7 +9,8 @@
         "sandbox": "node ./deploy/sandbox.js",
         "pretty": "prettier --write \"./**/*.{ts,html}\"",
         "serve": "browser-sync start --server --files",
-        "dev": "\"npm run serve\""
+        "dev": "\"npm run serve\"",
+        "start": "npm run serve"
     },
     "devDependencies": {
         "aws-sdk": "^2.860.0",

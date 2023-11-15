@@ -8,7 +8,7 @@
 }
 
 .ui-selected { 
-    background: #007fff; 
+    background: rgba(0, 44, 89, 0.459);
     color: white; 
 }
 
@@ -42,6 +42,11 @@
     font-weight: 300;
 }
 
-.help-title{
-
+.force-right{
+    margin: 20px auto;
 }
+
+#advdialog{
+    min-height: 800px !important;
+}
+
