@@ -107,7 +107,7 @@ function define_new_dialog(id_prefix, title='', options = {}){
 //    the selection event;
 //    and the actual HTML element of the selected item
 function define_single_select_list(id_prefix, on_selection_change = function(selected_item_name, e, ui){}) {
-    let select_list = $(`<div id="${id_prefix}" style="overflow-y:scroll"></div>`).selectable({
+    let select_list = $(`<div id="${id_prefix}" class="spacer" style="overflow-y:scroll"></div>`).selectable({
         selected: function(e, ui) { 
 
             // Unselect any previously selected (normally, selectable allows multiple selections)

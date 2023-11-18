@@ -7,8 +7,8 @@ show_starter_dialogs = false // set this to "false" to disable the survey and 3-
 // Make permissions dialog:
 perm_dialog = define_new_dialog('permdialog', title='Permissions', options = {
     // The following are standard jquery-ui options. See https://jqueryui.com/dialog/
-    height: 500,
-    width: 400,
+    height: 900,
+    width: 900,
     buttons: {
         OK:{
             text: "OK",
@@ -27,12 +27,12 @@ perm_dialog = define_new_dialog('permdialog', title='Permissions', options = {
     }
 })
 
-// Make the initial "Object Name:" text:
+// Make the initial "Current File Path:   " text:
 // If you pass in valid HTML to $(), it will *create* elements instead of selecting them. (You still have to append them, though)
-obj_name_div = $('<div id="permdialog_objname" class="section">Object Name: <span id="permdialog_objname_namespan"></span> </div>')
+let obj_name_div = $('<div id="permdialog_objname" class="section">Curent File: <span id="permdialog_objname_namespan"></span> </div>')
 
 //Make the div with the explanation about special permissions/advanced settings:
-advanced_expl_div = $('<div id="permdialog_advanced_explantion_text">For special permissions or advanced settings, click Advanced.</div>')
+let advanced_expl_div = $('<ol class="flush" id="permdialog_advanced_explantion_text"><h3>Instructions</h3> <li>You can add or remove a user using the ADD and REMOVE buttons at the top.</li><li>You can select a user at the top and change their file permissions using the checkboxes in the middle.</li> DENY overrides ALLOW</li><li> For special permissions or advanced settings, click Advanced.</li></ol>')
 
 // Make the (grouped) permission checkboxes table:
 grouped_permissions = define_grouped_permission_checkboxes('permdialog_grouped_permissions')
@@ -48,7 +48,7 @@ file_permission_users.css({
 })
 
 // Make button to add a new user to the list:
-perm_add_user_select = define_new_user_select_field('perm_add_user', 'Add...', on_user_change = function(selected_user){
+perm_add_user_select = define_new_user_select_field('perm_add_user', 'Add New User', on_user_change = function(selected_user){
     let filepath = perm_dialog.attr('filepath')
     if(selected_user && (selected_user.length > 0) && (selected_user in all_users)) { // sanity check that a user is actually selected (and exists)
         let expected_user_elem_id = `permdialog_file_user_${selected_user}`
@@ -119,7 +119,7 @@ let are_you_sure_dialog = define_new_dialog('are_you_sure_dialog', "Are you sure
 are_you_sure_dialog.text('Do you want to remove permissions for this user?')
 
 // Make actual "remove" button:
-perm_remove_user_button  = $('<button id="perm_remove_user" class="ui-button ui-widget ui-corner-all">Remove</button>')
+perm_remove_user_button  = $('<button id="perm_remove_user" class="ui-button ui-widget ui-corner-all">Remove Selected User</button>')
 perm_remove_user_button.click(function(){
     // Get the current user and filename we are working with:
     let selected_username = file_permission_users.attr('selected_item')
@@ -158,7 +158,7 @@ define_attribute_observer(perm_dialog, 'filepath', function(){
     let current_filepath = perm_dialog.attr('filepath')
 
     grouped_permissions.attr('filepath', current_filepath) // set filepath for permission checkboxes
-    $('#permdialog_objname_namespan').text(current_filepath) // set filepath for Object Name text
+    $('#permdialog_objname_namespan').text(current_filepath) // set filepath for Current File Path:    text
 
     // Generate element with all the file-specific users:
     file_users = get_file_users(path_to_file[current_filepath])
@@ -177,7 +177,7 @@ define_attribute_observer(perm_dialog, 'filepath', function(){
 // Make (semi-generic) selectable list of elements for all users.
 // attr_set_id is the id of the element where we should store the currently selected username.
 function make_all_users_list(id_prefix, attr_set_id, height=80) {
-    let all_user_list = $(`<div id="${id_prefix}_all_users" class="selectlist section" style="height:${height}px;overflow-y:scroll"></div>`)
+    let all_user_list = $(`<div id="${id_prefix}_all_users" class="selectlist section spacer" style="height:${height}px;overflow-y:scroll"></div>`)
     for(let username in all_users) {
         let user = all_users[username]
         all_user_list.append(
@@ -320,8 +320,8 @@ $( "#advtabs" ).tabs({
 });
 let adv_contents = $(`#advdialog`).dialog({
     position: { my: "top", at: "top", of: $('#html-loc') },
-    width: 700,
-    height: 450,
+    width: 900,
+    height: 900,
     modal: true,
     autoOpen: false,
     appendTo: "#html-loc",
@@ -703,8 +703,8 @@ $(`<div id="survey-dialog" title="Survey">
     </form>
 </div>`).dialog({
     modal:true,
-    width: 700,
-    height: 500,
+    width: 900,
+    height: 900,
     autoOpen: show_starter_dialogs,
     appendTo: "#html-loc",
     dialogClass: "no-close",
