@@ -50,3 +50,56 @@
     min-height: 800px !important;
 }
 
+.flush{
+    background-color: rgba(0, 16, 31, 0.794);
+    color: white;
+    font-weight: 300;
+    padding: 50px;
+    border-radius: 15px;
+    width: 60%;
+    display:block;
+    margin: auto 0;
+}
+
+#permdialog_objname_namespan{
+    color: rgb(0, 166, 255);
+    font-weight: 600;
+    margin: 20px;
+}
+#adv_perm_object_name{
+    color: rgb(0, 166, 255);
+    font-weight: 600;
+    margin: 20px;
+}
+#adv_owner_object_name {
+    color: rgb(0, 166, 255);
+    font-weight: 600;
+    margin: 20px;
+}
+
+#adv_effective_object_name{
+    color: rgb(0, 166, 255);
+    font-weight: 600;
+    margin: 20px;
+}
+
+#adv_perm_table_container{
+    min-height: 200px;
+}
+
+#adv_effective_effective_list{
+    min-height: 220px;
+}
+
+#adv_effective_effective_list td{
+    padding: 5px;
+}
+
+.spacer{
+    padding: 10px;
+}
+
+.flush li {
+    margin: 10px;
+}
+

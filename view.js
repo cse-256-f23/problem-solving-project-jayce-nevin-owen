@@ -74,16 +74,21 @@ $('.permbutton').click( function( e ) {
 
 // add clearer directions in the side-panel
 const sidebar = $("#sidepanel");
+sidebar.addClass(" flush");
 
+let headerST = $('<h3>').text("Helpful Tips.");
 
-var headerST = $('<h3>').text("Helpful Tips for This Window.");
 $('#sidepanel').append(headerST);
-var bodyST = $('<p>').html("1. Keep in mind that permissions for a specific file override permissions from the folder, so make sure to change the permissions at the level the prompt specifies.<br>2. You can make changes to permissions by clicking on the EDIT PERMISSIONS button next to the file/folder name.");
-$('#sidepanel').append(bodyST);
-$('#sidepanel').css({
-    'padding-left': '1%',
-    'max-width': '30%'
+let bodyST = $('<ol>')
+const rules = [
+    "Permissions for a specific file override permissions from the folder. Make sure to change the permissions at the level the prompt specifies.",
+    "You can make changes to permissions by clicking on the <strong>EDIT PERMISSIONS</strong> button next to the file/folder name."
+]
+rules.forEach(rule => {
+    const info = $(`<li> ${rule} </li>`)
+    bodyST.append(info);
 })
+$('#sidepanel').append(bodyST);
 
 
 // ---- Assign unique ids to everything that doesn't have an ID ----

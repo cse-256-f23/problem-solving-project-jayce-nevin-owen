@@ -197,7 +197,7 @@
               </ul>
               <div id="adv_permissions_tab">
                 <div id="adv_perm_object_name" class="section">
-                  Object Name: <span id="adv_perm_filepath"></span>
+                  Current File Path:    <span id="adv_perm_filepath"></span>
                 </div>
                 <div id="adv_perm_entries_text">Permission entries:</div>
                 <div
@@ -218,7 +218,7 @@
                   id="adv_perm_edit"
                   class="ui-button ui-widget ui-corner-all"
                 >
-                  Edit...
+                  Edit Advanced Permissions
                 </button>
                 <div id="adv_perm_inheritance_div">
                   <input
@@ -246,20 +246,28 @@
                     permissions from this object</label
                   >
                 </div>
-                <div class="instruct">
+                <div class="instruct flush">
                   <h3>Instructions</h3>
-                  <p>1. Here you can change the advanced permissions of each user!<br>2. Click EDIT.<br>3. Click CHANGE.<br>4. Select a user.<br>5. Change the necessary permissions.<br>6. Click OK.<br>7. Click OK to exit this popup or continue to other tabs in the popup by clicking their respective buttons.</p>
+                  <ol>
+                    <li>Here you can change the advanced permissions of each user!</li>
+                    <li>Click EDIT.</li>
+                    <li>Click CHANGE.</li>
+                    <li>Select a user.</li>
+                    <li>Change the necessary permissions.</li>
+                    <li>Click OK.</li>
+                    <li>Click OK to exit this popup or continue to other tabs in the popup by clicking their respective buttons.</li>
+                </ol>
                 </div>
               </div>
               <div id="adv_owner_tab">
-                <div id="adv_owner_explanation" class="section">
+                <div id="adv_owner_explanation" class="section flush">
                   <h3>Instructions</h3>
                   <p>You can take or assign ownership of this object if you have
                     the required permissions or privileges. Just select a user and click CHANGE OWNER.</p>
                   <br>
                 </div>
                 <div id="adv_owner_object_name" class="section">
-                  Object Name: <span id="adv_owner_filepath"></span>
+                  Current File Path:    <span id="adv_owner_filepath"></span>
                 </div>
                 <div id="adv_owner_current_owner_text">Current owner:</div>
                 <div
@@ -277,7 +285,7 @@
               </div>
               <div id="adv_effective_tab">
                 <div id="adv_effective_object_name" class="section">
-                  Object Name: <span id="adv_effective_filepath"></span>
+                  Current File Path:    <span id="adv_effective_filepath"></span>
                 </div>
                 <div id="adv_effective_user_text">Group or user name:</div>
                 <div id="adv_effective_current_user_line" class="section">
@@ -303,9 +311,14 @@
                   style="height: 150px; overflow-y: scroll"
                 ></div>
                 <br>
-                <section>
+                <section class="flush">
                   <h3>Instructions</h3>
-                  <p>1. You can get the effective permissions of a group or user here.<br>2. Click SELECT.<br>3. Seclect a user/group.<br>4. In the middle area, the permissions are displayed for you to see.</p>
+                  <ol>
+                    <li>You can get the effective permissions of a group or user here.</li>
+                    <li>Click SELECT.</li>
+                    <li>Select a user/group.</li>
+                    <li>In the middle area, the permissions are displayed for you to see.</li>
+                </ol>                
                 </section>
               </div>
             </div>
