@@ -76,9 +76,16 @@ $('.permbutton').click( function( e ) {
 const sidebar = $("#sidepanel");
 
 
-
-
+var headerST = $('<h3>').text("Helpful Tips for This Window.");
+$('#sidepanel').append(headerST);
+var bodyST = $('<p>').html("1. Keep in mind that permissions for a specific file override permissions from the folder, so make sure to change the permissions at the level the prompt specifies.<br>2. You can make changes to permissions by clicking on the EDIT PERMISSIONS button next to the file/folder name.");
+$('#sidepanel').append(bodyST);
+$('#sidepanel').css({
+    'padding-left': '1%',
+    'max-width': '30%'
+})
 
 
 // ---- Assign unique ids to everything that doesn't have an ID ----
+
 $('#html-loc').find('*').uniqueId() 

@@ -7,7 +7,7 @@ show_starter_dialogs = false // set this to "false" to disable the survey and 3-
 // Make permissions dialog:
 perm_dialog = define_new_dialog('permdialog', title='Permissions', options = {
     // The following are standard jquery-ui options. See https://jqueryui.com/dialog/
-    height: 500,
+    height: 610,
     width: 400,
     buttons: {
         OK:{
@@ -32,7 +32,7 @@ perm_dialog = define_new_dialog('permdialog', title='Permissions', options = {
 obj_name_div = $('<div id="permdialog_objname" class="section">Object Name: <span id="permdialog_objname_namespan"></span> </div>')
 
 //Make the div with the explanation about special permissions/advanced settings:
-advanced_expl_div = $('<div id="permdialog_advanced_explantion_text">For special permissions or advanced settings, click Advanced.</div>')
+advanced_expl_div = $('<div id="permdialog_advanced_explantion_text"><h3>Instructions</h3>1. You can add or remove a user using the ADD and REMOVE buttons at the top.<br>2. You can select a user at the top and change their file permissions using the checkboxes in the middle.<br>3. DENY overrides ALLOW<br>4. For special permissions or advanced settings, click Advanced.</div>')
 
 // Make the (grouped) permission checkboxes table:
 grouped_permissions = define_grouped_permission_checkboxes('permdialog_grouped_permissions')
