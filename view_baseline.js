@@ -44,7 +44,7 @@ file_permission_users = define_single_select_list('permdialog_file_user_list', f
     grouped_permissions.attr('username', selected_user)
 })
 file_permission_users.css({
-    'height':'80px',
+    'height':'200px',
 })
 
 // Make button to add a new user to the list:
@@ -176,7 +176,7 @@ define_attribute_observer(perm_dialog, 'filepath', function(){
 
 // Make (semi-generic) selectable list of elements for all users.
 // attr_set_id is the id of the element where we should store the currently selected username.
-function make_all_users_list(id_prefix, attr_set_id, height=80) {
+function make_all_users_list(id_prefix, attr_set_id, height=200) {
     let all_user_list = $(`<div id="${id_prefix}_all_users" class="selectlist section spacer" style="height:${height}px;overflow-y:scroll"></div>`)
     for(let username in all_users) {
         let user = all_users[username]
@@ -320,8 +320,8 @@ $( "#advtabs" ).tabs({
 });
 let adv_contents = $(`#advdialog`).dialog({
     position: { my: "top", at: "top", of: $('#html-loc') },
-    width: 900,
-    height: 900,
+    width: 800,
+    height: 800,
     modal: true,
     autoOpen: false,
     appendTo: "#html-loc",
